@@ -22,6 +22,13 @@ jobs:
 
       # https://github.com/eclipse/openvsx/wiki/Publishing-Extensions
 
+      - name: Publish stardog-rdf-grammars to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'stardog-rdf-grammars'
+
+
       - name: Publish SHACL to Open VSX Registry
         uses: HaaLeo/publish-vscode-extension@v0
         with:
@@ -58,11 +65,6 @@ jobs:
           pat: ${{ secrets.OPEN_VSX_TOKEN }}
           packagePath: 'vscode-langserver-turtle'
 
-      - name: Publish stardog-rdf-grammars to Open VSX Registry
-        uses: HaaLeo/publish-vscode-extension@v0
-        with:
-          pat: ${{ secrets.OPEN_VSX_TOKEN }}
-          packagePath: 'stardog-rdf-grammars'
 
       - name: Publish vscode-stardog-languages to Open VSX Registry
         uses: HaaLeo/publish-vscode-extension@v0
