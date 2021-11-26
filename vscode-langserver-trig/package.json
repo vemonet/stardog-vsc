@@ -1,6 +1,6 @@
 {
   "name": "vscode-langserver-trig",
-  "publisher": "stardog-union",
+  "publisher": "vemonet",
   "license": "Apache-2.0",
   "displayName": "TriG Language Server",
   "description": "Language intelligence (diagnostics, hover tooltips, etc.) for TriG",
@@ -53,6 +53,6 @@
     "vscode-languageclient": "^5.2.1"
   },
   "extensionDependencies": [
-    "stardog-union.stardog-rdf-grammars"
+    "vemonet.stardog-rdf-grammars"
   ]
 }

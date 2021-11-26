@@ -1,6 +1,6 @@
 {
   "name": "vscode-stardog-languages",
-  "publisher": "stardog-union",
+  "publisher": "vemonet",
   "displayName": "Stardog/RDF Languages Extension Pack",
   "description": "Language intelligence and syntax highlighting for Stardog languages",
   "license": "Apache-2.0",
@@ -26,11 +26,11 @@
     "Extension Packs"
   ],
   "extensionPack": [
-    "stardog-union.stardog-rdf-grammars",
-    "stardog-union.vscode-langserver-shacl",
-    "stardog-union.vscode-langserver-sms",
-    "stardog-union.vscode-langserver-sparql",
-    "stardog-union.vscode-langserver-turtle",
-    "stardog-union.vscode-langserver-trig"
+    "vemonet.stardog-rdf-grammars",
+    "vemonet.vscode-langserver-shacl",
+    "vemonet.vscode-langserver-sms",
+    "vemonet.vscode-langserver-sparql",
+    "vemonet.vscode-langserver-turtle",
+    "vemonet.vscode-langserver-trig"
   ]
 }

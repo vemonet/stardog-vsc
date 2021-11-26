@@ -1,0 +1,77 @@
+on:
+  push:
+    tags:
+      - "master"
+
+name: Publish Extension
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      # - name: Run tests
+      #   run: |
+      #     cd vscode-langserver-turtle
+      #     yarn
+      #     yarn run test
+
+      # https://github.com/eclipse/openvsx/wiki/Publishing-Extensions
+
+      - name: Publish SHACL to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'vscode-langserver-shacl'
+
+      - name: Publish SMS to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'vscode-langserver-sms'
+
+      - name: Publish SPARQL to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'vscode-langserver-sparql'
+      
+      - name: Publish GraphQL to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'vscode-langserver-stardog-graphql'
+      
+      - name: Publish TriG to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'vscode-langserver-trig'
+      
+      - name: Publish Turtle to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'vscode-langserver-turtle'
+
+      - name: Publish stardog-rdf-grammars to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'stardog-rdf-grammars'
+
+      - name: Publish vscode-stardog-languages to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v0
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
+          packagePath: 'vscode-stardog-languages'
+      
+
+      # - name: Publish to Visual Studio Marketplace
+      #   uses: HaaLeo/publish-vscode-extension@v0
+      #   with:
+      #     pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+      #     registryUrl: https://marketplace.visualstudio.com

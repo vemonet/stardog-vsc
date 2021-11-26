@@ -1,6 +1,6 @@
 {
   "name": "stardog-rdf-grammars",
-  "publisher": "stardog-union",
+  "publisher": "vemonet",
   "displayName": "Stardog RDF Grammars",
   "description": "Syntax highlighting for SPARQL, Turtle, Stardog Rules Syntax, and other RDF languages",
   "version": "0.1.2",
